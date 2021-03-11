@@ -5,7 +5,7 @@ import tkinter.scrolledtext
 from tkinter import simpledialog
 
 ip = "127.0.0.1"
-puerto = 55555
+puerto = 44444
 
 class Usuario:
     def __init__(self, ip, puerto):
@@ -21,7 +21,7 @@ class Usuario:
         self.corriendo = True
 
         threadGui = threading.Thread(target=self.loopGui)
-        threadRecibir = threading.Thread(target=self.recibir) #No es la recibir de server.py
+        threadRecibir = threading.Thread(target=self.recibir) 
 
         threadGui.start()
         threadRecibir.start()
